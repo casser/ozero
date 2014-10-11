@@ -1,27 +1,19 @@
 {
-  "name": "ozero",
-  "version": "0.0.6",
-  "description": "Define classes in Javascript",
-  "author": {
-    "name": "Sergey Mamyan",
-    "email": "sergey.mamyan@gmail.com"
+  "name"            : "ozero",
+  "version"         : "0.0.6",
+  "description"     : "Define classes in Javascript",
+  "keywords"        : ["class","object-oriented","OOP","zero"],
+  "homepage"        : "https://github.com/casser/zero",
+  "main"            : "./zero",
+  "author"          : {
+    "name"          : "Sergey Mamyan",
+    "email"         : "sergey.mamyan@gmail.com"
   },
-  "keywords": [
-    "class",
-    "object-oriented",
-    "OOP"
-  ],
-  "homepage": "https://github.com/casser/zero",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/casser/ozero"
+  "repository"      : {
+    "type"          : "git",
+    "url"           : "https://github.com/casser/ozero"
   },
-  "bugs": {
-    "url": "https://github.com/casser/zero/issues"
-  },
-  "main": "./zero",
-  "readme": "# Define Classes in Javascript\n\nThis is a module providing a OOP functionality for javascript,\ncurrently in development.  \n\n## Install\n\nFor Node.js\n\n```bash\nnpm install ozero\n```\n\n\n## How to Use\n\nWith Node.js:\n\n```javascript\n// simple-module.js \nwith(require('ozero')(module)){\n    O.import('any-module');\n    /**\n     * Private class definition \n     * @class PrivateClass\n     */\n    O.define('PrivateClass', BaseClass, FirstTrait, SecondTrait,{\n        '#static'           : {\n            STATIC_CONST    : 'static constant value',\n            staticField     : 'static field value',\n            staticMethod    : function(){\n                // ... \n            }\n        },\n        '#instance'         : {\n            constructor     : function(firstParam,secondParam){\n                this.super(firstParam); //call to BaseClass.constructor\n            },\n            instanceField   : 'instance field value'\n            instanceMethod  : function(firstParam,secondParam){\n                this.super(firstParam); //call to BaseClass.instanceMethod\n            }\n        }\n        \n    });\n    /**\n     * Public or exported class definition \n     * @class PrivateClass\n     */\n    O.define('PublicClass', BaseClass, FirstTrait, SecondTrait, {\n        // ....\n    });\n}\n// simple-module-useage.js\nwith(require('ozero')(module)){\n    O.import('any-module',{\n        PublicClass : 'RenamedClass'\n    });\n    \n    RenamedClass.staticMethod('A','B');\n    \n    var renamed = new RenamedClass();\n    renamed.instanceMethod('A','B');\n    \n}\n```\n",
-  "readmeFilename": "README.md",
-  "_id": "ozero@0.0.6",
-  "_from": "ozero@"
+  "bugs"            : {
+    "url"           : "https://github.com/casser/zero/issues"
+  }
 }
